@@ -8,4 +8,3 @@ print(f'Nome maiúsculo: {nome.upper()}')
 print(f'Nome minúsculo: {nome.lower()}')
 print(f'Letras totais: {len(nome) - nome.count((' '))}')
 print(f'Letras do primeiro nome: {nome.find(' ')}')
-
