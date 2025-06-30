@@ -1,9 +1,9 @@
 from random import randint
 
 # Cores para aprovado/reprovado
-verde    = '\033[92m'
-vermelho = '\033[91m'
 branco   = '\033[0m'
+vermelho = '\033[91m'
+verde    = '\033[92m'
 azul     = '\033[94m'
 
 # Listas
