@@ -37,10 +37,10 @@ for pos in range(len(lstnotasoma)):
 for pos in range(len(lstnomes)):
     if lstmedia[pos] >= 60: 
         aprovado = f'{verde}aprovado{branco}'
-        lstaprovados.append(f'{azul}{lstnomes[pos]}{branco} foi {aprovado} com {lstmedia[pos]}  ')
+        lstaprovados.append(f'{azul}{lstnomes[pos]:18s}{branco} foi {aprovado} com {lstmedia[pos]}  ')
     else:
         aprovado = f'{vermelho}reprovado{branco}'
-        lstreprovados.append(f'{azul}{lstnomes[pos]}{branco} foi {aprovado} com {lstmedia[pos]}  ')
+        lstreprovados.append(f'{azul}{lstnomes[pos]:18s}{branco} foi {aprovado} com {lstmedia[pos]}  ')
 
 print(f'Lista de {verde}aprovados{branco}:')   
 for aprovados in lstaprovados:
