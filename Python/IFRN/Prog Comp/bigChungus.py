@@ -16,12 +16,20 @@ bigchars = [
 " A:::::A                 A:::::A B::::::::::::::::B       CCC::::::::::::CD::::::::::::DDD     E::::::::::::::::::::EF::::::::FF                GGG::::::GGG:::GH:::::::H     H:::::::HI::::::::I   JJ:::::::::JJ     K:::::::K    K:::::KL::::::::::::::::::::::LM::::::M               M::::::MN::::::N        N::::::N   OO:::::::::OO   P::::::::P             QQ:::::::::::Q  R::::::R     R:::::RS:::::::::::::::SS       T:::::::::T          UU:::::::::UU               V:::V                      W:::W           W:::W           X:::::X       X:::::X    Y:::::::::::Y    Z:::::::::::::::::Z   00:::::::::00   1::::::::::12::::::::::::::::::23:::::::::::::::33         4::::::::4   55:::::::::55      66:::::::::66    7::::::7              88:::::::::88       9::::::9       ",
 "AAAAAAA                   AAAAAAABBBBBBBBBBBBBBBBB           CCCCCCCCCCCCCDDDDDDDDDDDDD        EEEEEEEEEEEEEEEEEEEEEEFFFFFFFFFFF                   GGGGGG   GGGGHHHHHHHHH     HHHHHHHHHIIIIIIIIII     JJJJJJJJJ       KKKKKKKKK    KKKKKKKLLLLLLLLLLLLLLLLLLLLLLLLMMMMMMMM               MMMMMMMMNNNNNNNN         NNNNNNN     OOOOOOOOO     PPPPPPPPPP               QQQQQQQQ::::QQRRRRRRRR     RRRRRRR SSSSSSSSSSSSSSS         TTTTTTTTTTT            UUUUUUUUU                  VVV                        WWW             WWW            XXXXXXX       XXXXXXX    YYYYYYYYYYYYY    ZZZZZZZZZZZZZZZZZZZ     000000000     11111111111122222222222222222222 333333333333333           4444444444     555555555          666666666     77777777                 888888888        99999999        "
 ]
-
-nome = 'ryan gui'#input ("Digite seu nome: ")
+nome = 'ryan gui'#input ("Digite seu nome: ").upper()
 
 # Adicionar as letras da string em uma lista
-lstLetras = []
+lstLetras        = []
+nomeFormatado = []
+
 for letra in nome:
     lstLetras.append(letra)
 
+# Andar por cada linha e fazer verificação pra depois cortar e add em nomeFormatado
+    for pos in range(len(bigchars)):
+        for letra in range(len(lstLetras)):
+            if lstLetras[letra] in bigchars[pos]:
+                nomeFormatado.append((str(pos).split)(lstLetras[letra]))
+
+print(nomeFormatado)
 
