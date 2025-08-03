@@ -1,0 +1,9 @@
+l_numeros = []
+for n in range(0,5):
+    l_numeros.append(int(input(f'Digite o valor {n}: ')))
+print(f'Você digitou os valores {l_numeros}.')
+
+sorted_l_numeros = l_numeros.sort()
+print(f'Os maiores valores são {sorted_l_numeros} na posição {'holder'}')
+
+# Ta errado deu preguiça
