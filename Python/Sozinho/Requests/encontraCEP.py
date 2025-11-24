@@ -1,9 +1,51 @@
 import requests
 
-def encontrarCEP(cep):
+def buscar_dados(cep):
     url = requests.get(f'https://viacep.com.br/ws/{cep}/json/').json()
-    cidade = url['localidade']
-    return url, cidade
+    return url
+
+
+
+
+
+def limpaCEP(cep: int):
+    if cep !=int or len(cep) !=8:
+        return False
+    return True
+
+def mostra_cep(cep):
+    for dados in cep:
+        print(f'{dados}: {cep[dados]}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
