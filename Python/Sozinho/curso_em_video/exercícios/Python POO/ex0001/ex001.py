@@ -17,4 +17,3 @@ print(g1.mensagem())
 
 # Objeto
 
-# Parei a aula em 26:16
