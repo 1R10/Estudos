@@ -1,1 +1,3 @@
-# Continuar do min 22:53
+from rich import print, inspect
+
+inspect(int, all="true") # Manual

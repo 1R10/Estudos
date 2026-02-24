@@ -1,3 +1,5 @@
+from rich import inspect
+
 class Conta_Bancaria:
     '''
     Cria uma conta bancária e permite fazer saques/depósitos
@@ -32,3 +34,5 @@ class Conta_Bancaria:
         
 # Área do uso da classe # ------------------------------------------------------------------------------------------
 conta_um = Conta_Bancaria(id = 1, nome = "Ryan", saldo = 0.73)
+
+inspect(Conta_Bancaria)
