@@ -35,4 +35,4 @@ class Conta_Bancaria:
 # Área do uso da classe # ------------------------------------------------------------------------------------------
 conta_um = Conta_Bancaria(id = 1, nome = "Ryan", saldo = 0.73)
 
-inspect(Conta_Bancaria)
+inspect(conta_um)
