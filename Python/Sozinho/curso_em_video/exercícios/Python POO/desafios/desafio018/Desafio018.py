@@ -6,6 +6,9 @@ from rich import print
 
 install()
 class churrasco():
+    '''
+    Esta classe vai analisar o valor de repartição para cada pessoa em um churrasco
+    '''
     def __init__(self,titulo, pessoas=0):
         self.nome    = titulo
         self.quantia = pessoas
@@ -21,7 +24,7 @@ class churrasco():
         print(analise)
         
 
-c1 = churrasco("Churras", pessoas=15)
+c1 = churrasco("Churras", pessoas=100)
 
 c1.analisar()
 
