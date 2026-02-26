@@ -12,7 +12,7 @@ class funcionario():
     def __str__(self):
         return f":handshake: Prazer, meu nome é [blue]{self.nome}[/]. Trabalho como {self.cargo} na empresa {self.empresa}."
     
-funcionario_um   = funcionario("Ryan", "Desenvolvedor", "Spotify")
+funcionario_um   = funcionario("Ryan", "Desenvolvedor", "inexistente")
 funcionario_dois = funcionario("Rayra", "Dona", "Ryan")
 
 
