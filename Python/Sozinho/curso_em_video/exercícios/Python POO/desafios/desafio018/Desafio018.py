@@ -10,9 +10,14 @@ class churrasco():
         self.nome    = titulo
         self.quantia = pessoas
 
-
+    
     def analisar(self):
-        analise = Panel(renderable=f"Analisando [green]{self.nome}[/] com [blue]{self.quantia}[/] pessoas", title= f"{self.nome}" ,style="white", width= 50)
+        analise = Panel(renderable=f"Analisando [green]{self.nome}[/] com [blue]{self.quantia}[/] pessoas...\n" +
+                        "Cada participante comerá 0.4kg de carne e cada Kg custa R$82,40\n" +
+                        f"O custo total será de [green]R${(self.quantia*0.4)*82.40:.2f}[/]\n"+
+                        f"Ficando [green]R${((self.quantia*0.4)*82.40)/self.quantia:.2f}[/] para cada participante",
+                         
+                          title= f"{self.nome}" ,style="white", width= 100)
         print(analise)
         
 
