@@ -27,4 +27,3 @@ class churrasco():
 c1 = churrasco("Churras", pessoas=100)
 
 c1.analisar()
-
