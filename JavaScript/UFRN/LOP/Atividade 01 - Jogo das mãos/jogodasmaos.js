@@ -1,5 +1,6 @@
-var tela = 2;
-
+var tela = 0;
+var doce = '';
+var doce2 = '';
 function setup() {
   createCanvas(400, 400);
 }
@@ -18,12 +19,19 @@ function draw() {
   textSize(20);
   fill(255);
   text('Instruções', 155, 233);
+  doce  = ''
+  doce2 = ''
 
   print('X:', mouseX,'nY:' , mouseY)
   }
   
   if (tela==1){// p1
     background(220);
+    textSize(30)
+    fill('black')
+    text('Jogador 1',120,60)
+    textSize(15)
+    text('Escolha em qual mão o doce ficará escondido:',45,90)
     fill("darkblue");
     rect(100, 190, 200, 50);
     textSize(20);
@@ -40,7 +48,24 @@ function draw() {
     text('X', 382, 18)  // voltar   
     print('X:', mouseX,'nY:' , mouseY)
 }
-    if (tela==2){//p2 - acertar
+    if (tela==11){//p1 vitoria
+        background('darkblue')
+        fill('white')
+        rect(60, 30, 280, 275)
+        textSize(15)
+        fill('black')
+        text('VITÓRIA DO JOGADOR N°1!', 100, 70)
+        fill('black')
+        text('O doce estava na mão ' + doce, 70, 100)
+        fill(225)
+        rect(380, 10, 10, 10)
+        textSize(8)
+        fill('black')
+        text('X', 382, 18)
+        
+    } 
+
+    if (tela==2){//p2
     background(220);
     textSize(30)
     fill('black')
@@ -59,6 +84,22 @@ function draw() {
     text('Direita', 170, 285);
     
     }
+    if (tela==22){//p2 vitoria
+    background('darkblue')
+    fill('white')
+    rect(60, 30, 280, 275)
+    textSize(15)
+    fill('black')
+    text('VITÓRIA DO JOGADOR N°2!', 100, 70)
+    fill('black')
+    text('O doce estava na mão ' + doce, 70, 100)
+    fill(225)
+    rect(380, 10, 10, 10)
+    textSize(8)
+    fill('black')
+    text('X', 382, 18)        
+    } 
+
     if (tela==9){
     background(220);
     fill("black");
@@ -83,21 +124,59 @@ function mouseClicked(){
     print(tela)
 
 if(tela==0){// menu
-    if (mouseX > 100 && mouseX < 300 && mouseY > 100 && mouseY <150){
-    print('dentro')
+    if (mouseX > 100 && mouseX < 300 && mouseY > 100 && mouseY < 150){
     tela = 1;
 }
-    if (mouseX > 100 && mouseX <300 && mouseY > 200 && mouseY < 250){
-        tela = 9;
+    else if (mouseX > 100 && mouseX < 300 && mouseY > 200 && mouseY < 250){
+    tela = 9;
     }
-    else{
-        print('Fora')
+
+}
+
+else if (tela==1){// p1
+    if (mouseX > 380 && mouseX < 390 && mouseY > 10 && mouseY < 20){
+    tela = 0;
+}
+    if (mouseX > 100 && mouseX < 300 && mouseY > 190 && mouseY < 240){
+        doce = 'esquerda'
+        print(doce)
+        tela = 2; 
+    }
+    if  (mouseX > 100 && mouseX < 300 && mouseY > 250 && mouseY < 300){
+        doce = 'direita'
+        print(doce)
+        tela = 2; 
     }
 }
-else if (tela==1){// tela do jogo
-    if (mouseX > 380 && mouseX < 390 && mouseY > 10 && mouseY <20){
-    print('dentro')
-    tela = 0
+else if (tela==2){// p2
+        if (mouseX > 100 && mouseX < 300 && mouseY > 190 && mouseY < 240){
+        doce2 = 'esquerda';
+        print(doce2); 
+        if (doce == doce2){
+            tela=22
+        }
+        else if (doce != doce2){
+            tela = 11
+        }else{
+            tela =22
+        }
+
+    }
+    if  (mouseX > 100 && mouseX < 300 && mouseY > 250 && mouseY < 300){
+        doce2 = 'direita';
+        print(doce2);
+        if (doce == doce2){
+            tela = 22
+        }
+        else {
+            tela = 11
+        }
+         
+    }
+}
+else if (tela == 11 || tela == 22){
+    if (mouseX > 380 && mouseX < 390 && mouseY > 10 && mouseY < 20){
+    tela = 0;
 }
 }
 else if (tela==9){// instruções
